@@ -34,10 +34,6 @@ async function getRepoStars(repo: string) {
     console.log(error);
   }
 }
-
-const starsCount = {
-  sisleytech: await getRepoStars("joshsisley/sisley.tech"),
-};
 ---
 
 <DefaultLayout
@@ -55,41 +51,6 @@ const starsCount = {
 
     <section class="projects">
       <PortfolioItem
-        isOpenSource
-        sourceCode="https://github.com/joshsisley/sisley.tech"
-        githubStarsCount={starsCount.sisleytech}
-        projectYear="2023"
-        title="My Portfolio sisley.tech"
-        image="/images/sisleytech-portfolio.png"
-        tags={["JavaScript", "TypeScript", "Astro", "HTML", "CSS"]}
-      >
-        <p slot="subtitle">
-          My portfolio website, the site you are looking at right now!
-        </p>
-
-        <div slot="description">
-          <p>
-            Built with the Astro framework, this website is optimized for speed
-            and search engines, designed with recruiters and tech enthusiasts in
-            mind to efficiently access information about my skills, experience,
-            and projects.
-          </p>
-          <p>
-            The project emphasizes simplicity, utilizing reusable components and
-            minimal third-party libraries to streamline development and reduce
-            maintenance.
-          </p>
-          <p>
-            Embracing transparency and collaboration, the website's codebase is
-            fully open-source, allowing others to review my code and draw
-            inspiration. The growing number of forks and stars on GitHub
-            highlights the project's adaptability and the value it brings to the
-            developer community.
-          </p>
-        </div>
-      </PortfolioItem>
-
-      <PortfolioItem
         projectYear="2022"
         title="Quince Players"
         image="/images/quinceplayers-portfolio.png"
@@ -98,7 +59,6 @@ const starsCount = {
           "JavaScript",
           "TypeScript",
           "Node.js",
-          "Directus",
           "PostgreSQL",
           "HTML",
           "CSS",
@@ -166,15 +126,7 @@ const starsCount = {
         title="Coinconomics"
         image="/images/coinconomics-portfolio.png"
         projectLink="https://www.coinconomics.com"
-        tags={[
-          "JavaScript",
-          "TypeScript",
-          "React",
-          "Next.js",
-          "HTML",
-          "CSS",
-          "SanityCMS",
-        ]}
+        tags={["JavaScript", "TypeScript", "React", "Next.js", "HTML", "CSS"]}
       >
         <p slot="subtitle">
           Next.js webapp with an intuitive UI that provides users with useful
@@ -201,7 +153,7 @@ const starsCount = {
         title="Childrens Book Author"
         image="/images/fionabarker-portfolio.png"
         projectLink="https://fionabarker.co.uk/"
-        tags={["WordPress", "PHP", "MySQL", "HTML", "CSS", "JavaScript"]}
+        tags={["MySQL", "HTML", "CSS", "JavaScript"]}
       >
         <p slot="subtitle">
           Website for a children's book author, powered by WordPress for content
