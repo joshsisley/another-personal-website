@@ -1,0 +1,254 @@
+---
+import DefaultLayout from "../components/LayoutDefault.astro";
+import { yearsInIndustry } from "../js/yearsInIndustry";
+import DevLogo, { devIcons } from "../components/DevLogo.astro";
+import TimelineItem from "../components/TimelineItem.astro";
+---
+
+<DefaultLayout
+  documentTitle="About"
+  documentDescription="I'm Josh, a Lead Software Engineer with a decade of experience building software."
+>
+  <section class="container">
+    <h1 class="main-heading text-swipe-animation" id="greeting">
+      <!-- Value inserted via greeting.js -->
+    </h1>
+    <div class="intro">
+      <p>
+        I'm Josh, a Lead Software Engineer with a decade of experience building
+        and delivering innovative software solutions.
+      </p>
+    </div>
+
+    <div class="main-section">
+      <img
+        class="profile-photo"
+        src="/images/profile-pic.jpg"
+        alt="Josh Sisley"
+      />
+      <div class="main-section-text">
+        <p>
+          I am a Lead Software Engineer at the forefront of complex project
+          execution in the defense sector combining deep technical expertise
+          with strategic oversight. My role involves guiding the development and
+          delivery of innovative software solutions that meet rigorous standards
+          and critical timelines.
+        </p>
+        <p>
+          I am passionate about technology and its application in enhancing
+          security and efficiency. I enjoy designing and contributing to the
+          architecture of scalable platforms and applications that support our
+          strategic objectives. My approach focuses on robust, scalable and
+          maintainable software solutions that power essential defense
+          functions.
+        </p>
+      </div>
+    </div>
+
+    <section class="marquee">
+      <div class="marquee-content">
+        {devIcons.map((devIcon) => <DevLogo icon={devIcon.title} />)}
+      </div>
+
+      <!-- Logos duplicated for scrolling effect -->
+      <div aria-hidden="true" class="marquee-content">
+        {devIcons.map((devIcon) => <DevLogo icon={devIcon.title} />)}
+      </div>
+    </section>
+
+    <section class="container">
+      <h2 class="sub-heading">Experience</h2>
+
+      <div class="timeline-items">
+        <TimelineItem
+          isCurrent
+          company="Two Six Technologies"
+          workLocation="Remote"
+          title="Lead Software Engineer"
+          startDate="Oct 2022"
+          logo="/images/twosixlogo.jpeg"
+          responsibilities={[
+            "Leads the planning and execution of multiple technical projects, overseeing task prioritization and schedule management to ensure timely delivery and successful outcomes.",
+            "Analyzes portfolio and program requirements to develop comprehensive technical roadmaps in collaboration with Engineering Management and the PMO.",
+            "Acts as the primary point of contact for both internal and external stakeholders, facilitating clear communication and alignment across the project team.",
+            "Contributes to the development of a large-scale platform/application, primarily utilizing JavaScript, TypeScript, and modern front end frameworks/libraries to deliver robust, scalable, and maintainable software solutions.",
+            "Works closely with cross-functional teams to ensure technical objectives align with broader business goals, promoting teamwork and cohesion throughout the project lifecycle",
+          ]}
+        />
+
+        <TimelineItem
+          company="SemanticBits"
+          workLocation="Remote"
+          title="Senior Software Engineer & Tech Lead"
+          startDate="Mar 2021"
+          endDate="Oct 2022"
+          logo="/images/semanticbits.png"
+          responsibilities={[
+            "Defined the technical architecture for a new software application, ensuring scalability, maintainability, and high performance.",
+            "Implemented a systematic approach to managing technical debt by creating and prioritizing technical tickets, leading to improved software quality and reduced maintenance overhead.",
+            "Provided comprehensive mentorship to junior engineers, fostering a collaborative learning environment and enhancing the team's technical skill set.",
+            "Built out the MVP for a full-stack application using Angular, Nest.js, and PostgreSQL, enabling rapid deployment and client feedback",
+            "Collaborated with other teams and product stakeholders, ensuring that technical requirements aligned with business objectives, resulting in a solution that met stakeholder expectations.",
+          ]}
+        />
+
+        <TimelineItem
+          company="Daysmart Software Inc"
+          workLocation="On-Site"
+          title="Senior Full Stack Developer"
+          startDate="Apr 2019"
+          endDate="Apr 2021"
+          logo="/images/daysmart.png"
+          responsibilities={[
+            "Led and architected the migration of the existing app from Angular.js to the newest version of Angular (currently 10) while continuing to build out new features.",
+            "Built out new Serverless APIs using AWS Lambda in order to provide a more secure and scalable product for our customers.",
+            "Primary languages/libraries used include: NodeJS, AngularJS, Angular, MongoDB, Mongoose, MySQL, and Sequelize.",
+          ]}
+        />
+
+        <TimelineItem
+          company="Cisco (contract via Vaco)"
+          workLocation="On-Site"
+          title="Full Stack JavaScript Developer"
+          startDate="Apr 2018"
+          endDate="Apr 2019"
+          logo="/images/cisco.png"
+          responsibilities={[
+            "Led a team of developers to upgrade an existing AngularJS application to the latest version of Angular.",
+            "Integrated and built out numerous different APIs using Node.js in order to create a centralized bug tracking software for the company.",
+            "Primary languages/libraries used include: NodeJS, AngularJS, Angular, MongoDB, Mongoose, Passport, Lodash, and ElasticSearch.",
+          ]}
+        />
+        <TimelineItem
+          company="Hawaiian Airlines (contract)"
+          workLocation="Remote"
+          title="Software Developer"
+          startDate="Jul 2017"
+          endDate="Apr 2018"
+          logo="/images/hawaiian-airlines.png"
+          responsibilities={[
+            "Reduced initial page load by over 50% by reducing the amount of DOM elements/watchers (Angular.js) on the page and by reducing the amount of API calls being made on initial load. ",
+            "Helped create the new flight booking application using AngularJS 1.6 and C#.",
+            "Helped to research and estimate the time/effort that would be involved in upgrading existing applications from Angular 1.x to the latest Angular.",
+          ]}
+        />
+        <TimelineItem
+          company="Shoeboxed Inc"
+          workLocation="On-Site"
+          title="Front End Software Developer"
+          startDate="Mar 2016"
+          endDate="Jul 2017"
+          logo="/images/shoeboxed.png"
+          responsibilities={[
+            "Built out the front end for the newest application (Fetch) using a combination of Angular 2+, HTML5, CSS3 and Bootstrap.",
+            "Helped to build out the RESTful API service using Node.js and Express framework.",
+            "Developed the reporting functionality for a brand new product that allows users to be able to filter through all of their expenses quickly and efficiently.",
+          ]}
+        />
+        <TimelineItem
+          company="Jellyfish Health"
+          workLocation="On-Site"
+          title="Front End Software Developer"
+          startDate="Jan 2015"
+          endDate="Mar 2016"
+          logo="/images/jellyfish.png"
+          responsibilities={[
+            "Created a user friendly dashboard that displayed both live and historical data for physicians and medical staff.",
+            "Built the main Patient Access client application using Angular 1.x and Bootstrap to create a responsive SPA.",
+            "Designed and developed waiting room displays used in clinic waiting rooms to show the progression of patients.",
+          ]}
+        />
+      </div>
+    </section>
+  </section>
+
+  <style lang="scss">
+    .main-section {
+      display: flex;
+      gap: 2rem;
+      margin-top: 1rem;
+      align-items: center;
+    }
+
+    .profile-photo {
+      width: 200px;
+    }
+
+    /* Marquee styles */
+    .marquee {
+      --gap: 1.5rem;
+      position: relative;
+      display: flex;
+      overflow: hidden;
+      user-select: none;
+      gap: var(--gap);
+      margin: 3.5rem 0;
+      &:hover {
+        .marquee-content {
+          animation-play-state: paused;
+        }
+      }
+    }
+
+    .marquee-content {
+      flex-shrink: 0;
+      display: flex;
+      justify-content: space-around;
+      gap: var(--gap);
+      min-width: 100%;
+      animation: scroll 30s linear infinite reverse;
+    }
+
+    @keyframes scroll {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(calc(-100% - var(--gap)));
+      }
+    }
+
+    /* Pause animation when reduced-motion is set */
+    @media (prefers-reduced-motion: reduce) {
+      .marquee-content {
+        animation-play-state: paused !important;
+      }
+    }
+
+    .sub-heading {
+      margin-top: 0;
+      margin-bottom: 25px;
+    }
+
+    .timeline-items {
+      display: flex;
+      flex-direction: column;
+      row-gap: 0rem;
+    }
+
+    @media screen and (max-width: 980px) {
+      .main-section {
+        gap: 1rem;
+        display: block;
+        word-break: break-word;
+      }
+
+      .profile-photo {
+        float: left;
+        width: 152px;
+        margin: 10px;
+      }
+
+      :global(.devicon) {
+        width: 45px !important;
+        height: 45px !important;
+      }
+    }
+  </style>
+
+  <script hoist>
+    import { greeting } from "../js/greeting";
+    const greetingContainer = document.getElementById("greeting");
+    greetingContainer.innerText = greeting();
+  </script>
+</DefaultLayout>
