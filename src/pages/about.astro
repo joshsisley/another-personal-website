@@ -23,7 +23,7 @@ import TimelineItem from "../components/TimelineItem.astro";
     <div class="main-section">
       <img
         class="profile-photo"
-        src="/images/profile-pic.jpg"
+        src="/images/website-profile-pic.png"
         alt="Josh Sisley"
       />
       <div class="main-section-text">
@@ -246,9 +246,9 @@ import TimelineItem from "../components/TimelineItem.astro";
     }
   </style>
 
-  <script hoist>
+  <script>
     import { greeting } from "../js/greeting";
     const greetingContainer = document.getElementById("greeting");
-    greetingContainer.innerText = greeting();
+    greetingContainer!.innerText = greeting();
   </script>
 </DefaultLayout>
